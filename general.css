@@ -179,4 +179,17 @@ footer {
   padding: 50px;
   padding: 20px;
 }
+@media (min-width: 800px) {
+  footer p {
+    font-size: 1vw;
+    padding: 1vw;
+  }
+  footer h2 {
+    font-size: 1.5vw;
+    padding: 1vw;
+  }
+  footer {
+    padding: 2vw;
+  }
+}
 /********************* Forside Indhold *********************/
