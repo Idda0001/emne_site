@@ -1,0 +1,181 @@
+/********************* Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/********************* General *********************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f3f4f8;
+}
+h1 {
+  font-family: "Markazi Text", serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #1a2b4f;
+}
+h2 {
+  font-family: "Markazi Text", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #29437a;
+}
+p {
+  font-family: "Besley", serif;
+  color: #323740;
+}
+.knap {
+  display: inline-block;
+  background-color: #29437a;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 0.7rem 1.4rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Markazi Text", serif;
+  font-size: 1.5rem;
+}
+/********************* Hamburger Menu *********************/
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 10px;
+  --foreground: #1a2b4f;
+  --background: #1a2b4f;
+  --animation: 150ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  right: 48px;
+  z-index: 2;
+  cursor: pointer;
+}
+.hamburger-menu::before,
+.hamburger-menu input,
+.hamburger-menu::after {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--background);
+  border-radius: 2px;
+  transition: opacity var(--animation), width var(--animation),
+    rotate var(--animation), translate var(--animation);
+  transform-origin: right center;
+  outline: solid #29437a;
+  outline-width: 1px;
+}
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: solid #29437a;
+  outline-width: 1px;
+  pointer-events: none;
+}
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: -45deg;
+  background-color: white;
+  transition: var(--animation);
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+  outline: none;
+}
+.hamburger-menu:has(input:checked)::after {
+  rotate: 45deg;
+  background-color: white;
+  transition: var(--animation);
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+  outline: none;
+}
+/********************* Navigation *********************/
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #29437a;
+  color: white;
+  padding: 2rem 1rem;
+  padding-top: 150px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  text-align: right;
+}
+
+header:has(.hamburger-menu input:checked) .navigation {
+  transform: translateX(0);
+}
+.navigation a {
+  text-decoration: none;
+  color: white;
+  padding-right: 40px;
+  font-family: "Besley", serif;
+  font-weight: 600;
+}
+.navigation ul {
+  list-style: none;
+  line-height: 30px;
+}
+
+/********************* Header *********************/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  width: 120px;
+}
+header .logo_menu {
+  background-color: #f3f4f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  padding-top: 2rem;
+  border-top: solid #29437a;
+  border-width: 25px;
+}
+/********************* Footer *********************/
+footer p,
+h2 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  line-height: 20px;
+}
+footer {
+  background-color: #1a2b4f;
+  padding: 50px;
+  padding: 20px;
+}
+/********************* Forside Indhold *********************/
