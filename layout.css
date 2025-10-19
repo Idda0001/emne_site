@@ -55,3 +55,206 @@ img {
   border: solid #29437a;
   margin-bottom: 50px;
 }
+/********************* Galleri Indhold *********************/
+.gal1,
+.gal2,
+.gal3,
+.gal4,
+.gal5,
+.gal6 {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: solid 3px #29437a;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 80%;
+  height: auto;
+}
+.gal_h1 {
+  margin: 20px;
+}
+/********************* Kontakt Indhold *********************/
+.kontakt_main {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f4f8;
+  min-height: 100vh;
+}
+
+.kontakt_main h1 {
+  text-align: center;
+  color: #1a2b4f;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-family: "Markazi Text", serif;
+}
+
+.kontakt_main .form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff;
+  border: 2px solid #29437a;
+  border-radius: 16px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.kontakt_main .form h2 {
+  color: #1a2b4f;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #29437a;
+  padding-bottom: 3px;
+  font-family: "Markazi Text", serif;
+}
+
+.kontakt_main label {
+  font-weight: 600;
+  color: #1a2b4f;
+  margin-top: 10px;
+}
+
+.kontakt_main input,
+.kontakt_main textarea {
+  padding: 12px;
+  border: 2px solid #29437a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.kontakt_main input:focus,
+.kontakt_main textarea:focus {
+  outline: none;
+  border-color: #1a2b4f;
+  box-shadow: 0 0 6px rgba(41, 67, 122, 0.4);
+}
+
+.kontakt_main ::placeholder {
+  color: #7a7a7a;
+  opacity: 0.8;
+  font-family: "Besley", serif;
+}
+
+.kontakt_main button {
+  margin-top: 20px;
+  padding: 12px 0;
+  background-color: #1a2b4f;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Markazi Text", serif;
+}
+/********************* Pakker Indhold *********************/
+
+.pakker {
+  display: grid;
+  gap: 28px;
+  padding: 24px 16px;
+  justify-content: center;
+}
+
+.pakke {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+  padding-top: 65px;
+  padding-bottom: 10px;
+}
+
+.pakke-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  text-align: center;
+  margin: 0;
+  margin-top: 50px;
+  background: #1a2b4f;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  line-height: 1.2;
+  padding-bottom: 60px;
+  z-index: -1;
+}
+
+.card {
+  border: 3px solid #1a2b4f;
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+  font-family: "Besley", serif;
+  color: #323740;
+}
+
+.pris {
+  margin: 0;
+  padding: 20px;
+  font-weight: 600;
+  border-top: solid #1a2b4f;
+  border-width: 2px;
+}
+.card ul li {
+  margin-bottom: 15px;
+}
+/********************* Om Indhold *********************/
+.om1 {
+  text-align: center;
+  padding: 40px;
+}
+.om1 p {
+  padding-bottom: 30px;
+}
+.om1 h1 {
+  padding-top: 30px;
+}
+.om1 h2 {
+  color: #29437a;
+}
+.om2 {
+  align-content: center;
+  text-align: center;
+}
+.om2 h2 {
+  color: #29437a;
+  padding-bottom: 0;
+}
+.om2 img {
+  padding: 40px;
+  padding-top: 0;
+}
+.om2 p {
+  padding: 20px;
+  padding-top: 0;
+}
+summary {
+  cursor: pointer;
+  list-style: none;
+}
